@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>first letter change</title>
+        <body>
+            <h2>function to capitalize first letter</h2><hr>
+            <script>
+                let tstr,x;
+                let strng=prompt("Enter string");
+                document.write(strng+"<br>");
+                let len=strng.length;
+                document.write(len+"<br>");
+                
+                strng=strng.split(" ");
+                for(let i=0,x=strng.length;i<x;i++)
+                {
+                    strng[i]=strng[i][0].toUpperCase()+strng[i].substr(1);
+
+                }
+                tstr=strng.join(" ");
+                document.write("after capitalization string will be=>"+tstr);
+            </script>
+        </body>
+    </head>
+</html>

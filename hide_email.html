@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hiding email</title>
+        <body>
+            <h2>Program to hide email from unauthorised users</h2><hr>
+            <script>
+                let mail=prompt("enter valid email");
+               let dom=mail.split("@")[1];
+              //let first1=mail.split("@")[0];
+                let first=mail.slice(0,5);
+                
+                alert("your email=>"+first+"*****"+dom);
+                document.write("your email=>"+first+"*****"+dom);
+
+            </script>
+        </body>
+    </head>
+</html>

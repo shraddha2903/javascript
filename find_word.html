@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Find Word</title>
+        <body>
+            <h2>function to find word inn given string</h2><hr>
+            <script>
+                let input,w,y,l=0,x=0;
+                input=prompt("enter any string");
+                console.log(input);
+                w=prompt("enter word to search");
+               for(i=0;i<input.length;i++)
+               {
+                 if(input[i]==w[0])
+                 {
+                     k=0;
+                      for(j=i;j<i+w.length;j++)
+                      {
+                          if(input[j]==w[k])
+                          {
+                              l++;
+                              k++;
+                          }
+                          if(l==w.length){
+                              x++;
+                          }
+                      }
+                      l=0;
+                  }
+               }
+                document.write("'"+w+"'"+"was found "+x+" times");
+
+            </script>
+        </body>
+    </head>
+</html>

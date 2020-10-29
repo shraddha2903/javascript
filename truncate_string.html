@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Truncating String</title>
+        <body>
+            <h2>Truncating the String to a certain number of Words</h2><hr>
+            <script>
+                let k=0,li,print;
+                let str=prompt("enter any string");
+                document.write(str+"<br>");
+                let n=prompt("enter number of words from where you want to truncate the string<br>");
+                //let trn=str.slice(str,5);
+               // document.write(trn);
+               let len=str.length;
+               for(i=0;i<len;i++)
+               {
+                  if(str[i]==' ')
+                  {
+                      k++;
+                      if(k==n)
+                      {
+                         li=i;
+                         break;
+                      }
+                      
+                   }
+
+               }
+               print=str.substring(0,li);
+               document.write(print);
+            </script>
+        </body>
+    </head>
+</html>

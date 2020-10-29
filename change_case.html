@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>change string</title>
+        </head>
+        <body>
+            <h2>function to change lower case to upper and upper to lower</h2><hr>
+            <script>
+
+                function tolowerfunct()
+                {
+                  let a;
+                  var b=' ';
+
+                  a=prompt("enter nay string");
+                  document.write("Original String=<br>"+a);
+                  for(i=0;i<a.length;i++)
+                  {
+                      if(a.charCodeAt(i)>=65 && a.charCodeAt(i)<=90)
+                      {
+                         b=b+a.charAt(i).toLowerCase();
+                      }
+                      else
+                      {
+                      b=b+a.charAt(i).toUpperCase();
+                      }
+                 // document.write(kk);
+                  //return(kk);
+                   }
+                   return b;
+                }
+              let fn=tolowerfunct();
+               document.write("after changing case the string look like this=<br>"+fn);
+            </script>
+        </body>
+    
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>change temprature</title>
+        <body>
+          <h2>function to change temprature</h2><hr>
+            <script>
+//function 1
+              function fahren_to_cels(f)
+                {
+                  let celsius=5*(f-32)/9;
+                  document.write("temprature in fahrenheit will be="+celsius+"C");
+                    
+                }
+
+//function2
+                function cels_to_fahren(cels)
+                {
+                  let f=32+(9*cels)/5;
+                  document.write("temprature in fahrenheit will be="+ f +"F");
+                    
+                }
+//implementation
+                let inp=prompt("to change temprature in fahrenheit Enter f and in celsius Enter c");
+                switch(inp)
+                {
+                    case "f":
+                    var cels=prompt("enter temprature in celsius");
+                    cels_to_fahren(cels);
+                    break;
+                    case "c":
+                    var far=prompt("enter temprature in fahrenheit");
+                    fahren_to_cels(far);
+                    break;
+                    default:
+                    document.write("Invalid code.....please enter c or f..");
+                }
+            </script>
+        </body>
+    </head>
+</html>

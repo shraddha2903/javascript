@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fibonacci series</title>
+        <body>
+            <h2>function to print fibonacci series</h2>
+            <script>
+                let a=0,b=1,i;
+                let n=prompt("enter number of term to print fibonacci series");
+                document.write(a+" "+b);
+                 for(i=1;i<=n-2;i++)
+                 {
+                     let s=a+b;
+                     document.write(" "+s+" ");
+                     [a,b]=[b,s];
+                 }
+            </script>
+        </body>
+    </head>
+</html>
