@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head><title>add item</title>
+        
+        <script>
+            let arr=[];
+            var k=0;
+            //add item
+            function add_item()
+        {
+             var item=document.getElementById("t1").value;
+            arr.push(item);
+            alert("item "+item+" added at index "+k);
+             k++;
+        }
+        //display item
+        function dis_item()
+        {
+            var n_item="<hr/>";
+           // document.getElementById("demo").style.display="block";
+          for(let j=0;j<arr.length;j++)
+        {
+         n_item+="element "+j+" ="+arr[j]+"<br>";
+        
+        }
+         document.getElementById("bt1").innerHTML=n_item;      
+        }
+        </script>
+
+    
+    </head>
+    <body>
+        <center>
+        <h3>program 5=>add item in a blank array and display</h3>
+      
+        <input type="text"placeholder="enter item to add"id="t1">
+        <input type="button"value="ADD"onclick="add_item();">
+        <input type="button"value="DISPLAY"onclick="dis_item();">
+        </center>
+    <hr>
+        <div id="bt1">
+              
+        </div>
+    
+
+    
+    </body>
+</html>

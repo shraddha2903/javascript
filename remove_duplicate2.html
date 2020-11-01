@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>remove Duplicate Element</title>
+        
+    </head>
+    <body>
+        <center>
+        <h3>program 6=>Remove duplicate element from an array</h3>
+    </center>
+        <hr size="5px;"color="green">
+        <script>
+            function r_duplicate(data)
+         {
+           return data.filter((element,index)=>data.indexOf(element)===index);  
+         }
+         
+         var n=prompt("enter no of element of array");
+         var arr=[n];
+         for(let i=0;i<n;i++)
+         {
+             arr[i]=prompt("enter element");
+             document.write(arr[i]+"<br>");
+         }
+        document.write("after removing duplicate element=><br>"+r_duplicate(arr));
+        </script>
+    </body>
+</html>

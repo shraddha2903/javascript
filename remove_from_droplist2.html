@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Remove from Dropdown List</title>
+        <meta content="width=device-width ,initial-scale=1">
+        <meta charset="utf-8">
+        <script>
+            function remove()
+            {
+                var x=document.getElementById('list');
+                list[list.selectedIndex].remove();
+            }
+        </script>
+        <style>
+            .btn
+            {
+                background-color: green;
+                font-size: 20px;
+            }
+            .btn1
+            {
+               font-size: 20px; 
+            }
+    
+        </style>
+    </head>
+    <body>
+        <center>
+        <h3>program 7=>Remove Items From Dropdown List</h3><hr size="5px;"color="red">
+        
+<select id="list"class="btn1">
+    <option>web Development</option>
+    <option>Python</option>
+    <option>Fashion Designing</option>
+    <option>JavaScript</option>
+    <option>Political Science</option>
+</select>
+<br><br>
+<input type="button"onclick="remove();"value="Select and Remove"class="btn">
+</center>
+    </body>
+</html>

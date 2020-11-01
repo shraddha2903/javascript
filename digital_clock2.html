@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>digital clock</title>
+        <style>
+            .clock{
+                font-size: 175px;
+                width: 900px;
+                margin-left: 100px;
+                margin-right: 100px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                text-align: center;
+                border: 5px solid yellow;
+                border-radius:20px;
+            }
+            .btn{
+                font-size:80px;
+                border: 3px solid black;
+                background-color: lawngreen;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <h2>program 1=>Digital Clock</h2>
+    </center><hr>
+       
+    
+        <script>
+            
+        function show_time()
+        {   
+             setInterval(show_time,1000);
+            let time=new Date();
+            let hour=time.getHours();
+            let min=time.getMinutes();
+            let sec=time.getSeconds();
+           // let final=hour+":"+min+":"+sec;
+            let am_pm="AM";
+            if(hour>12&&am_pm=="AM")
+            {
+                hour-=12;
+                am_pm="PM";
+            }
+            //check
+            if(hour>12&&am_pm=="PM")
+            {
+                hour-=12;
+                am_pm="AM";
+            }
+//
+            if(hour==0&&am_pm=="PM")
+            {
+                hour=12;
+                am_pm="AM";
+            }
+            //check2
+            if(hour==0&&am_pm=="AM")
+            {
+                hour=12;
+                am_pm="PM";
+            }
+//
+            hour=hour<10?"0"+hour:hour;
+            min=min<10?"0"+min:min;
+            sec=sec<10?"0"+sec:sec;
+            let final=hour+":"+min+":"+sec+am_pm;
+            document.getElementById("text").innerHTML=final;
+            
+            
+        }
+        //show_time();
+       //24 hour
+       function show24_hour()
+       {   
+        
+        setInterval(show24_hour,1000);
+        let time=new Date();
+            let hour=time.getHours();
+            let min=time.getMinutes();
+            let sec=time.getSeconds();
+            let am_pm="PM";
+            if(am_pm=="PM"&& hour<12)
+            {
+            hour=hour+12;
+            am_pm="AM";
+            }
+            if(am_pm=="AM"&&hour==12)
+            {
+            hour=hour-12;
+            am_pm="PM";
+            }
+            hour=hour<10?"0"+hour:hour;
+            min=min<10?"0"+min:min;
+            sec=sec<10?"0"+sec:sec;
+            let final=hour+":"+min+":"+sec+am_pm;
+            document.getElementById("text1").innerHTML=final;
+            
+       }
+    
+    </script>
+    <center>
+        
+        <button type="button"onclick="show_time();"class="btn">12 hour</button>
+    <div class="clock"id="text">00:00:00</div>
+    
+    <button type="button"onclick="show24_hour();" class="btn">24 hour</button>
+    <div class="clock"id="text1">00:00:00</div></center>
+
+   
+
+    <br><br>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head><title>sorting_array</title></head>
+    <body>
+        <h2>progrma 3=>program to Sort items of an Array</h2><hr>
+        <script>
+            var n=prompt("enter no. of element to print");
+            var arr=[n];
+              for(let i=0;i<n;i++)
+            {
+                  arr[i]=prompt("enter "+n+" element");
+              }
+              document.write("original array=><br>");
+            for(let i=0;i<n;i++)
+            {
+            document.write(arr[i]+"<br>");
+            }
+            for(let i=0;i<n;i++)
+            {
+               for(let j=0;j<n-1;j++)
+               {
+                   if(arr[j]>arr[j+1])
+                   {
+                     var temp=arr[j];
+                      [arr[j],arr[j+1]]=[arr[j+1],temp];
+                   }
+               }
+            }
+            document.write("sorted Array=><br>");
+            for(let i=0;i<n;i++)
+            {
+                document.write(arr[i]+"<br>");
+            }
+        </script>
+    </body>
+</html>
