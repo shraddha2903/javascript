@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Difference In Date</title>
+        <style>
+            .clr{
+                font-size: 30px;
+            }
+        </style>
+        <script>
+            function differ_in_date()
+            {
+                var date1=new Date(document.getElementById("dt1").value);
+                var date2=new Date(document.getElementById("dt2").value);
+                var diff_date=date2-date1;
+                var diff_day=diff_date/(1000*3600*24);
+                var final="total number of days between dates <br>"+date1+"<br> and <br>"+date2+"is:<br>"+diff_day;
+                document.getElementById("text").innerHTML=final;
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h2>program2: Javascript function to get difference between two dates in days</h2><hr>
+    DATE1:<input type="date"id="dt1"placeholder="enter date1">
+    DATE2<input type="date"id="dt2"placeholder="enter date2">
+    <input type="button"value="Check"onclick="differ_in_date();">
+    <div id="text"class="clr"></div>
+       </center>
+    </body>
+</html>

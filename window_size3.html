@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Get Window Size</title>
+        <script>
+            function get_wh()
+            {
+                var w=document.documentElement.clientWidth;
+                var h=document.documentElement.clientHeight;
+                var result="width :"+w+" and height: "+h;
+                document.getElementById('wh').innerHTML=result;
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+        <h2>Program3: function to get width and height the window</h2><hr>
+        <input type="button"value="click here to get window size"onclick="get_wh();">
+        <div id="wh"></div>
+    </center>
+    </body>
+</html>

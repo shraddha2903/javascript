@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arm Strong</title>
+        <style>
+            .clr{
+                width: 20%;
+            
+            }
+            .btn{
+               background-color:darkgreen;
+                width: 20%;
+            }
+        </style>
+        <script>
+        function arm_strong()
+        {    var s=0,rem,result,number;
+              number=Number(document.getElementById("N").value);
+              result=number;
+            window.alert("the inputed number is="+number+"<br>");
+            while(number>0)
+            {
+               rem=number%10;
+               s=s+rem*rem*rem;
+               number=parseInt(number/10);
+            }
+            if(s==result)
+            {
+                window.alert("number"+result+"is an arm strong number<br>");
+            }
+            else
+            window.alert("Not an arm strong number");
+        }
+        </script>
+        <body>
+            <center>
+            <h2>Program4: function to find ArmStrong number of 3 digits</h2>
+            <hr color="blue"size="5px">
+                <input type="text"placeholder="enter 3 digits number"name="n"id="N"class="clr">
+                <br><br>
+                <input type="button"value="Check"onclick="arm_strong();"class="btn">
+            
+            <div id="N"></div>
+            </center>
+        </body>
+    </head>
+</html>

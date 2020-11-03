@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Validate credit Card</title>
+<script>
+    function card_validation()
+    {
+        var c_no=document.getElementById("card_no").value;
+        var s,d,c_type,c_length,sum=0,count,cmp=15,j;
+        c_length=c_no.length;
+        [c_type]=[c_no];
+        [s]=[c_no];
+        //var k=c_length;
+        //window.alert(k);
+        if(c_length==16)
+        {    count=0;
+             [j]=[c_length];
+               d=c_type%10;
+               var even=d%2;
+               for(let k=0;k<c_length-1;k++)
+               {    c_type=c_type/10;
+                   let d1=c_type%10;
+                   if(d1==d)
+                   {
+                         count++;
+                        // window.alert(count);
+                   }
+                  // c_type=c_type/10;
+               }
+               if(count==15||even!=0)
+               {
+               window.alert("Please enter valid Card Number1");
+               }
+               else{
+                    while(j>1)
+                    {
+                        var d2=s%10;
+                        sum=sum+d2;
+                        s=s/10;
+                        j--;
+                    } 
+                    if(sum>16)
+                    {
+                        window.alert("Card is Valid...Your Welcome<br>");
+                        var print="<h4>YOUR WELCOME.....YOUR CREDIT CARD IS VALID..<br>YOUR CARD NUMBER IS=> <i>"+c_no+"</i></h4>";
+                        document.getElementById("id1").innerHTML=print;
+                    } 
+                    else{
+                        window.alert("please enter 16 digit valid card number");
+                    }
+               }
+              
+            
+        }
+        else{
+            window.alert("please enter valid credit card detail");
+        }
+
+
+    }
+</script>
+    </head>
+    <body>
+        <center>
+            <h2>Validating Credit Card Detail</h2><hr>
+            <input type="text"id="card_no"placeholder="enter card number">
+<input type="button" onclick="card_validation();"value="Validate">
+<div id="id1">
+
+</div>
+<hr>
+</center>
+
+    </body>
+</html>
