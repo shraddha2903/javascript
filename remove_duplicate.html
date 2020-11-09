@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Duplicate Element</title>
+    <script>
+        function r_duplicate()
+        {
+        let n=prompt("enter number of element n");
+        let arr=[n];
+        for(i=0;i<n;i++)
+        {
+            arr[i]=prompt("enter array element");
+        }
+        document.write(arr);
+        const arr1=new Set(arr);
+        const o_array=[...arr1];
+        document.write("after removing duplicate element<br>"+o_array);
+        }
+       r_duplicate();
+    </script>
+</head>
+<body>
+    <hr>
+    <h2>JS function to Remove duplicate element</h2>
+</body>
+</html>

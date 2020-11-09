@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculating User's Age</title>
+</head>
+<body>
+    <h2>Calculating User's Age</h2><hr>
+    <script>
+        function cal_age(yr)
+        {  
+            var u_dob=new Date(document.getElementById("dob").value);
+            var diff=Date.now()-u_dob.getTime();
+            var age=new Date(diff);
+            var cal=Math.abs(age.getUTCFullYear()-1970);
+            alert("your age=>"+cal);
+            if(14<cal&&cal<24)
+            {
+                alert("you are eligible for our study");
+            }
+            else
+            alert("you are not eligible for our study");
+           
+        }
+    </script>
+    <input type="date"placeholder="select your DOB"id="dob">
+    <input type="button"value="check Eligibility"onclick="cal_age();">
+</body>
+
+</html>

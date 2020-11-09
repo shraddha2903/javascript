@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Finding Last Element</title>
+        <script>
+            function find_last()
+            {
+            let n=prompt("enter number of element n");
+            let arr=[n];
+            for(let i=0;i<n;i++)
+            {
+                arr[i]=prompt(`enter ${i} th element of the array`);
+            }
+            for(let k=0;k<n;k++){
+              document.write(arr[k]+"<br>");
+               //document.getElementById("id1").innerHTML=arr[i];
+            }
+            let n2=prompt("enter last index from where you want to see the element")
+            let n3=arr.length;
+            document.write(`last ${n2} element=<br>`);
+            let n4=n3-n2;
+//
+            document.write(arr.slice(n4));
+
+            }
+            find_last();
+        </script>
+    </head>
+    <body>
+        <div><hr><h2>Program to find last N element</h2></div>
+    </body>
+</html>
